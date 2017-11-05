@@ -85,12 +85,14 @@ counties<-monarch %>%
   scale_y_continuous(expand = c(0,0),
                      breaks = c(0,50000,100000,200000,300000),
                      labels = c("0","50k","100k","200K","300k"))+
-  labs(caption="Overall monarch butterfly population trend 1997-2016 in Western US assessed by Thanksgiving counts.")+
+  labs(caption="")+
   theme_bw(base_size = 16)+
   theme(panel.grid = element_blank(),
-        plot.caption = element_text(hjust = 1))
+        plot.caption = element_text())
   
 ```
+Overall monarch butterfly population trend 1997-2016 in Western US assessed by Thanksgiving counts.
+
 ```{r Totals by County big and small, echo=TRUE,fig.height=4,fig.width=10}
 big_counties<-monarch %>% 
   filter(COUNTY%in%c("Santa Cruz", "San Luis Obispo", "Santa Barbara", "Ventura")) %>% 
